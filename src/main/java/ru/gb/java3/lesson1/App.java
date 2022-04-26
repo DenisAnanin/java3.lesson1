@@ -18,11 +18,19 @@ public class App {
         for (Object o : arrayList) {
             System.out.print(o+" ");
         }
+        System.out.println("");
         Fruit apple1 = new Apple();
         Fruit apple2 = new Apple();
         Fruit orange1 = new Orange();
         Fruit orange2 = new Orange();
+        Box box1 = new Box();
+        box1.addFruit(apple1);
+        box1.addFruit(orange1);
 
+        Box box2 =new Box();
+        box2.addFruit(apple2);
+        System.out.println(box1.weight());
+        System.out.println(box1.compare(box2));
     }
 
     private <T1> ArrayList<T1> toList(T1[] arr) {
